@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".PatientHome">
+    <!--    <include layout="@layout/activity_main"/>-->
+    <!--     Top Section with Gradient -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/headerbkg"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <!-- Home Title -->
+        <TextView
+            android:id="@+id/tv_home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp" />
+
+        <!-- Welcome Message -->
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Patient"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_below="@id/tv_home_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How we can help you today?"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/tv_welcome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp" />
+    </RelativeLayout>
+
+
+    <!-- Grid Layout for Buttons -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:layout_gravity="center">
+
+        <!-- find Doctor Button -->
+        <LinearLayout
+            style="@style/GridItemStyle"
+            android:id="@+id/findDoctor"
+            android:onClick="onDoctorsClick">
+            <ImageView
+                style="@style/GridIconStyle"
+                android:src="@drawable/baseline_find_in_page_24" />
+            <TextView
+                style="@style/GridTextStyle"
+                android:text="Find Hospitals"
+                android:textColor="@color/lavendar"/>
+        </LinearLayout>
+
+        <!-- Find Medicine Button -->
+        <LinearLayout
+            style="@style/GridItemStyle"
+            android:id="@+id/findMedicine"
+            android:onClick="onMedicineClick">
+            <ImageView
+                style="@style/GridIconStyle"
+                android:src="@drawable/baseline_medical_services_24" />
+            <TextView
+                style="@style/GridTextStyle"
+                android:text="Check Medicine"
+                android:textColor="@color/lavendar"/>
+        </LinearLayout>
+
+        <!-- Emergency Button -->
+        <LinearLayout
+            style="@style/GridItemStyle"
+            android:id="@+id/Emergency"
+            android:onClick="onEmergencyClick">
+            <ImageView
+                style="@style/GridIconStyle"
+                android:src="@drawable/baseline_emergency_24" />
+            <TextView
+                style="@style/GridTextStyle"
+                android:text="Emergency"
+                android:textColor="@color/lavendar"/>
+        </LinearLayout>
+
+        <!-- Report Button -->
+        <LinearLayout
+            style="@style/GridItemStyle"
+            android:id="@+id/report"
+            android:onClick="onReportClick">
+            <ImageView
+                style="@style/GridIconStyle"
+                android:src="@drawable/baseline_report_24" />
+            <TextView
+                style="@style/GridTextStyle"
+                android:text="Report"
+                android:textColor="@color/lavendar"/>
+        </LinearLayout>
+
+        <!-- Medication Remainder Button -->
+        <LinearLayout
+            style="@style/GridItemStyle"
+            android:id="@+id/remainder"
+            android:onClick="onMedicineRemainderClick">
+            <ImageView
+                style="@style/GridIconStyle"
+                android:src="@drawable/baseline_access_alarm_24" />
+            <TextView
+                style="@style/GridTextStyle"
+                android:text="Medicine Remainder"
+                android:textColor="@color/lavendar"/>
+        </LinearLayout>
+
+        <!-- Billing Button -->
+        <LinearLayout
+            style="@style/GridItemStyle"
+            android:id="@+id/billing"
+            android:onClick="onBillingClick">
+            <ImageView
+                style="@style/GridIconStyle"
+                android:src="@drawable/baseline_payments_24" />
+            <TextView
+                style="@style/GridTextStyle"
+                android:text="Billing"
+                android:textColor="@color/lavendar"/>
+        </LinearLayout>
+
+    </GridLayout>
+</LinearLayout>
